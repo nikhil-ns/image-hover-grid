@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #bde0fe;
+}
+
+.container{
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container{
+    height: 400px;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-img, .main-img > img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.img-container .img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.2;
+    background-color: red;
+}
+
+.blocks{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow:row wrap;
+}
+.block{
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    opacity: 0;
+    background-color: white;
+    transition: opacity ease-in 0.2s;
+}
+
+.block.active{
+    opacity: 0.6;
+}
